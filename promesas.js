@@ -59,15 +59,3 @@ let promesa5 = new Promise(function(resolve, reject){
         resolve(`la promesa 5 y duró ${random2}`)
     }, random2)
 })
-
-Promise.race([promesa4, promesa5])
-    .then(function(respuesta){
-        console.log(`La promesa ganadora fue ${respuesta} milisegundos`)
-    })
-    .then(function(respuesta2){
-        console.log(respuesta2)
-        return promesa5,
-    })
-    .catch(function(error){
-        console.log(error)
-    })
